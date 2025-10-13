@@ -1,7 +1,7 @@
 package com.lemavos.mcf.services.mathUtils;
 
 public class Bhaskara {
-    public static String calculate(double a, double b, double c){
+    public static String calculateBhaskara(double a, double b, double c){
         double delta = calculateDelta(a, b, c);
         if(delta < 0){
             return "Delta is negative, no real roots.";
