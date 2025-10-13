@@ -1,0 +1,19 @@
+package com.lemavos.mcf.services.mathUtils.shapes;
+
+public class Circle {
+    public static String CircleArea(double radius){
+        if (radius <= 0 ){
+            return "Radius must be a positive number.";
+        }
+        double area = Math.PI * Math.pow(radius, 2);
+        return "The area of the circle is: " + area;
+    }
+
+    public static String circunference(double radius){
+        if (radius <= 0 ){
+            return "Radius must be a positive number.";
+        }
+        double area = 2 * Math.PI * radius;
+        return "The area of the circle is: " + area;
+    }
+}
