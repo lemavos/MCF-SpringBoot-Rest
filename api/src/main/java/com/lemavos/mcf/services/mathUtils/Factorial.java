@@ -1,5 +1,8 @@
 package com.lemavos.mcf.services.mathUtils;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class Factorial {
     public static String calculateFactorial(int number){
         if (number < 0){
