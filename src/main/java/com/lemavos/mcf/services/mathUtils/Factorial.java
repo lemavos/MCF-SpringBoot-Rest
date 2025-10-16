@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class Factorial {
-    public static String calculateFactorial(int number){
+    public static String calculateFactorial(double number){
         if (number < 0){
             return "Undefined for negative numbers";
         }
