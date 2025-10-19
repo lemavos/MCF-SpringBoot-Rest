@@ -13,7 +13,7 @@ import com.lemavos.mcf.services.mathUtils.pythagorasTheorem.Leg;
 import com.lemavos.mcf.services.mathUtils.shapes.Circle;
 import com.lemavos.mcf.services.mathUtils.shapes.Diamond;
 import com.lemavos.mcf.services.mathUtils.shapes.Rectangle;
-
+import com.lemavos.mcf.services.mathUtils.shapes.Square;
 
 @RestController
 @RequestMapping("/math")
@@ -79,9 +79,21 @@ public class MathController {
     }
 
         // Rectangle Perimeter
-    @GetMapping("area/rectangle")
+    @GetMapping("perimeter/rectangle")
     public ResponseEntity<?> RectanglePerimeter(@RequestParam double length,
                                                     @RequestParam double width) {
         return ResponseEntity.ok(Rectangle.calculateRectanglePerimeter(length, width));
+    }
+
+        // Square Area
+    @GetMapping("area/square")
+    public ResponseEntity<?> squareArea(@RequestParam double side) {
+        return ResponseEntity.ok(Square.calculateSquareArea(side));
+    }
+
+        // Square perimeter
+    @GetMapping("perimeter/square")
+    public ResponseEntity<?> squarePerimeter(@RequestParam double side) {
+        return ResponseEntity.ok(Square.calculateSquarePerimeter(side));
     }
 }
