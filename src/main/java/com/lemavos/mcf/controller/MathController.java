@@ -11,6 +11,7 @@ import com.lemavos.mcf.services.mathUtils.Factorial;
 import com.lemavos.mcf.services.mathUtils.pythagorasTheorem.Hypotenuse;
 import com.lemavos.mcf.services.mathUtils.pythagorasTheorem.Leg;
 import com.lemavos.mcf.services.mathUtils.shapes.Circle;
+import com.lemavos.mcf.services.mathUtils.shapes.Diamond;
 
 @RestController
 @RequestMapping("/math")
@@ -53,5 +54,18 @@ public class MathController {
     @GetMapping("shapes/circunference")
     public ResponseEntity<?> Circunference(@RequestParam double radius) {
         return ResponseEntity.ok(Circle.calculateCircunference(radius));
+    }
+
+        // Diamond area
+    @GetMapping("area/diamond")
+    public ResponseEntity<?> DiamondArea(@RequestParam double diagonal1,
+                                                @RequestParam double diagonal2) {
+        return ResponseEntity.ok(Diamond.calculateDiamondArea(diagonal1, diagonal2));
+    }
+
+        // Diamond perimeter
+    @GetMapping("perimeter/diamond")
+    public ResponseEntity<?> DiamondPerimeter(@RequestParam double side) {
+        return ResponseEntity.ok(Diamond.calculateDiamondPerimeter(side));
     }
 }
