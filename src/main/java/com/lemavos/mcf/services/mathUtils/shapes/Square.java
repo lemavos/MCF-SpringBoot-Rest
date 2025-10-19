@@ -1,7 +1,7 @@
 package com.lemavos.mcf.services.mathUtils.shapes;
 
 public class Square {
-    public static String squareArea(double side){
+    public static String calculateSquareArea(double side){
         if (side <= 0){
             return "Side length must be a positive number.";
         }
@@ -9,7 +9,7 @@ public class Square {
         return "The area of the square is: " + area;
     }
 
-    public static String squarePerimeter(double side){
+    public static String calculateSquarePerimeter(double side){
         if (side <= 0 ){
             return "Side length must be a positive number.";
         }

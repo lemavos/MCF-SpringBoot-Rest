@@ -10,6 +10,7 @@ import com.lemavos.mcf.services.mathUtils.Bhaskara;
 import com.lemavos.mcf.services.mathUtils.Factorial;
 import com.lemavos.mcf.services.mathUtils.pythagorasTheorem.Hypotenuse;
 import com.lemavos.mcf.services.mathUtils.pythagorasTheorem.Leg;
+import com.lemavos.mcf.services.mathUtils.shapes.Circle;
 
 @RestController
 @RequestMapping("/math")
@@ -17,28 +18,40 @@ public class MathController {
 
     // Detached
     @GetMapping("/bhaskara")
-    public ResponseEntity<?> calculateBhaskara(@RequestParam double a,
+    public ResponseEntity<?> Bhaskara(@RequestParam double a,
                                              @RequestParam double b,
                                              @RequestParam double c) {
         return ResponseEntity.ok(Bhaskara.calculateBhaskara(a, b, c));
     }
 
     @GetMapping("/factorial")
-    public ResponseEntity<?> calculateFactorial(@RequestParam double number) {
+    public ResponseEntity<?> Factorial(@RequestParam double number) {
         return ResponseEntity.ok(Factorial.calculateFactorial(number));
     }
 
     // Pythagoras Theorem
 
     @GetMapping("pythagoras/hypotenuse")
-    public ResponseEntity<?> calculateHypotenuse(@RequestParam double leg1,
+    public ResponseEntity<?> Hypotenuse(@RequestParam double leg1,
                                                 @RequestParam double leg2) {
         return ResponseEntity.ok(Hypotenuse.calculateHypotenuse(leg1, leg2));
     }
 
     @GetMapping("pythagoras/leg")
-    public ResponseEntity<?> calculateLeg(@RequestParam double hypotenuse,
+    public ResponseEntity<?> Leg(@RequestParam double hypotenuse,
                                         @RequestParam double leg1) {
         return ResponseEntity.ok(Leg.calculateLeg(hypotenuse, leg1));
+    }
+
+    // Shapes
+        // circle area
+    @GetMapping("shapes/cirlce")
+    public ResponseEntity<?> CircleArea(@RequestParam double radius) {
+        return ResponseEntity.ok(Circle.calculateCircleArea(radius));
+    }
+        // circle circunference
+    @GetMapping("shapes/circunference")
+    public ResponseEntity<?> Circunference(@RequestParam double radius) {
+        return ResponseEntity.ok(Circle.calculateCircunference(radius));
     }
 }

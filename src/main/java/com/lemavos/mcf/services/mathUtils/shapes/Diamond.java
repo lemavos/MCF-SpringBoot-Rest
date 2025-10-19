@@ -1,7 +1,7 @@
 package com.lemavos.mcf.services.mathUtils.shapes;
 
 public class Diamond {
-    public static String diamondArea(double diagonal1, double diagonal2){
+    public static String calculateDiamondArea(double diagonal1, double diagonal2){
         if (diagonal1 <= 0 || diagonal2 <= 0){
             return "Diagonals must be positive numbers.";
         }
@@ -9,7 +9,7 @@ public class Diamond {
         return "The area of the diamond is: " + area;
     }
 
-    public static String diamondPerimeter(double side){
+    public static String calculateDiamondPerimeter(double side){
         if (side <= 0 ){
             return "Side length must be a positive number.";
         }

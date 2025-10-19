@@ -1,7 +1,7 @@
 package com.lemavos.mcf.services.mathUtils.shapes;
 
 public class Rectangle {
-    public static String rectangleArea(double length, double width){
+    public static String calculateRectangleArea(double length, double width){
         if (length <= 0 || width <= 0){
             return "Length and width must be positive numbers.";
         }
@@ -9,7 +9,7 @@ public class Rectangle {
         return "The area of the rectangle is: " + area;
     }
 
-    public static String rectanglePerimeter(double length, double width){
+    public static String calculateRectanglePerimeter(double length, double width){
         if (length <= 0 || width <= 0){
             return "Length and width must be positive numbers.";
         }
