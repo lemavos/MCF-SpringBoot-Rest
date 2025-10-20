@@ -10,6 +10,7 @@ import com.lemavos.mcf.services.mathUtils.Bhaskara;
 import com.lemavos.mcf.services.mathUtils.Factorial;
 import com.lemavos.mcf.services.mathUtils.geometricSolids.Cube;
 import com.lemavos.mcf.services.mathUtils.geometricSolids.Parallelepiped;
+import com.lemavos.mcf.services.mathUtils.geometricSolids.Sphere;
 import com.lemavos.mcf.services.mathUtils.pythagorasTheorem.Hypotenuse;
 import com.lemavos.mcf.services.mathUtils.pythagorasTheorem.Leg;
 import com.lemavos.mcf.services.mathUtils.shapes.Circle;
@@ -114,7 +115,7 @@ public class MathController {
 
         // parallelepiped volume
     @GetMapping("volume/parallelepiped")
-    public ResponseEntity<?> cubeVolume(@RequestParam double length,
+    public ResponseEntity<?> parallelepipedVolume(@RequestParam double length,
                                         @RequestParam double width, 
                                         @RequestParam double height) {
         return ResponseEntity.ok(Parallelepiped.calculateVolumeParallelepiped(length, width, height));
@@ -122,10 +123,22 @@ public class MathController {
 
         // parallelepiped surface
     @GetMapping("surface/parallelepiped")
-    public ResponseEntity<?> cubeSurface(@RequestParam double length,
+    public ResponseEntity<?> parellelepipedSurface(@RequestParam double length,
                                         @RequestParam double width, 
                                         @RequestParam double height) {
         return ResponseEntity.ok(Parallelepiped.calculateSurfaceAreaParallelepiped(length, width, height));
+    }
+
+        // Sphere volume
+    @GetMapping("volume/sphere")
+    public ResponseEntity<?> SphereVolume(@RequestParam double radius) {
+            return ResponseEntity.ok(Sphere.calculateVolumeSphere(radius));
+    }
+
+        // Sphere surface
+    @GetMapping("surface/sphere")
+    public ResponseEntity<?> SphereSurface(@RequestParam double radius) {
+        return ResponseEntity.ok(Sphere.calculateSurfaceAreaSphere(radius));
     }
 
 }
