@@ -11,6 +11,7 @@ import com.lemavos.mcf.services.mathUtils.Factorial;
 import com.lemavos.mcf.services.mathUtils.geometricSolids.Cube;
 import com.lemavos.mcf.services.mathUtils.geometricSolids.Parallelepiped;
 import com.lemavos.mcf.services.mathUtils.geometricSolids.Sphere;
+import com.lemavos.mcf.services.mathUtils.geometricSolids.TrapezoidalPrism;
 import com.lemavos.mcf.services.mathUtils.pythagorasTheorem.Hypotenuse;
 import com.lemavos.mcf.services.mathUtils.pythagorasTheorem.Leg;
 import com.lemavos.mcf.services.mathUtils.shapes.Circle;
@@ -141,4 +142,15 @@ public class MathController {
         return ResponseEntity.ok(Sphere.calculateSurfaceAreaSphere(radius));
     }
 
+        // trapezoidal Prism volume
+    @GetMapping("volume/trapezoidalprism")
+    public ResponseEntity<?> trapezoidalPrismVolume(@RequestParam double radius) {
+            return ResponseEntity.ok(TrapezoidalPrism.calculateVolumeTrapezoidalPrism(radius, radius, radius, radius));
+    }
+
+        // trapezoidal Prism surface
+    @GetMapping("surface/trapezoidalprism")
+    public ResponseEntity<?> trapezoidalPrismSurface(@RequestParam double radius) {
+        return ResponseEntity.ok(TrapezoidalPrism.calculateSurfaceAreaTrapezoidalPrism(radius, radius, radius, radius));
+    }
 }
