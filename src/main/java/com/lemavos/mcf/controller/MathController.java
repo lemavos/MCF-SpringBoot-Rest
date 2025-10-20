@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.lemavos.mcf.services.mathUtils.Bhaskara;
 import com.lemavos.mcf.services.mathUtils.Factorial;
 import com.lemavos.mcf.services.mathUtils.geometricSolids.Cube;
+import com.lemavos.mcf.services.mathUtils.geometricSolids.Parallelepiped;
 import com.lemavos.mcf.services.mathUtils.pythagorasTheorem.Hypotenuse;
 import com.lemavos.mcf.services.mathUtils.pythagorasTheorem.Leg;
 import com.lemavos.mcf.services.mathUtils.shapes.Circle;
@@ -109,6 +110,22 @@ public class MathController {
     @GetMapping("surface/cube")
     public ResponseEntity<?> cubeSurface(@RequestParam double side) {
         return ResponseEntity.ok(Cube.calculateSurfaceAreaCube(side));
+    }
+
+        // parallelepiped volume
+    @GetMapping("volume/parallelepiped")
+    public ResponseEntity<?> cubeVolume(@RequestParam double length,
+                                        @RequestParam double width, 
+                                        @RequestParam double height) {
+        return ResponseEntity.ok(Parallelepiped.calculateVolumeParallelepiped(length, width, height));
+    }
+
+        // parallelepiped surface
+    @GetMapping("surface/parallelepiped")
+    public ResponseEntity<?> cubeSurface(@RequestParam double length,
+                                        @RequestParam double width, 
+                                        @RequestParam double height) {
+        return ResponseEntity.ok(Parallelepiped.calculateSurfaceAreaParallelepiped(length, width, height));
     }
 
 }
