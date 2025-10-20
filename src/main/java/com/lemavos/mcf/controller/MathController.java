@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.lemavos.mcf.services.mathUtils.Bhaskara;
 import com.lemavos.mcf.services.mathUtils.Factorial;
+import com.lemavos.mcf.services.mathUtils.geometricSolids.Cube;
 import com.lemavos.mcf.services.mathUtils.pythagorasTheorem.Hypotenuse;
 import com.lemavos.mcf.services.mathUtils.pythagorasTheorem.Leg;
 import com.lemavos.mcf.services.mathUtils.shapes.Circle;
@@ -96,4 +97,18 @@ public class MathController {
     public ResponseEntity<?> squarePerimeter(@RequestParam double side) {
         return ResponseEntity.ok(Square.calculateSquarePerimeter(side));
     }
+
+    // Geometric Solids
+        // cube volume
+    @GetMapping("volume/cube")
+    public ResponseEntity<?> cubeVolume(@RequestParam double side) {
+        return ResponseEntity.ok(Cube.calculateVolumeCube(side));
+    }
+
+        // cube surface
+    @GetMapping("surface/cube")
+    public ResponseEntity<?> cubeSurface(@RequestParam double side) {
+        return ResponseEntity.ok(Cube.calculateSurfaceAreaCube(side));
+    }
+
 }

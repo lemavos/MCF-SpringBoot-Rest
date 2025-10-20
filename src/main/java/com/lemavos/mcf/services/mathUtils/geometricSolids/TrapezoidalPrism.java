@@ -1,12 +1,12 @@
 package com.lemavos.mcf.services.mathUtils.geometricSolids;
 
 public class TrapezoidalPrism {
-    public static double volumeTrapezoidalPrism(double a, double b, double h, double length) {
+    public static double calculateVolumeTrapezoidalPrism(double a, double b, double h, double length) {
         double areaBase = ((a + b) / 2) * h;
         return areaBase * length;
     }
 
-    public static double surfaceAreaTrapezoidalPrism(double a, double b, double h, double length) {
+    public static double calculateSurfaceAreaTrapezoidalPrism(double a, double b, double h, double length) {
         double areaBase = ((a + b) / 2) * h;
         double side1 = a * length;
         double side2 = b * length;
