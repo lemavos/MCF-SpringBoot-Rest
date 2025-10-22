@@ -52,7 +52,7 @@ public class MathController {
 
     // Shapes
         // circle area
-    @GetMapping("shapes/cirlce")
+    @GetMapping("shapes/circle")
     public ResponseEntity<?> CircleArea(@RequestParam double radius) {
         return ResponseEntity.ok(Circle.calculateCircleArea(radius));
     }
@@ -150,7 +150,10 @@ public class MathController {
 
         // trapezoidal Prism surface
     @GetMapping("surface/trapezoidalprism")
-    public ResponseEntity<?> trapezoidalPrismSurface(@RequestParam double radius) {
-        return ResponseEntity.ok(TrapezoidalPrism.calculateSurfaceAreaTrapezoidalPrism(radius, radius, radius, radius));
+    public ResponseEntity<?> trapezoidalPrismSurface(@RequestParam double a, 
+                                                    @RequestParam double b, 
+                                                    @RequestParam double h, 
+                                                    @RequestParam double length) {
+        return ResponseEntity.ok(TrapezoidalPrism.calculateSurfaceAreaTrapezoidalPrism(a, b, h, length));
     }
 }
