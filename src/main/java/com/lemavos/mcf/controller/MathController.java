@@ -144,8 +144,11 @@ public class MathController {
 
         // trapezoidal Prism volume
     @GetMapping("volume/trapezoidalprism")
-    public ResponseEntity<?> trapezoidalPrismVolume(@RequestParam double radius) {
-            return ResponseEntity.ok(TrapezoidalPrism.calculateVolumeTrapezoidalPrism(radius, radius, radius, radius));
+    public ResponseEntity<?> trapezoidalPrismVolume(@RequestParam double a, 
+                                                    @RequestParam double b, 
+                                                    @RequestParam double h, 
+                                                    @RequestParam double length) {
+            return ResponseEntity.ok(TrapezoidalPrism.calculateVolumeTrapezoidalPrism(a, b, h, length));
     }
 
         // trapezoidal Prism surface
