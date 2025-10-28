@@ -1,0 +1,15 @@
+com/lemavos/mcf/McfApplication.class
+com/lemavos/mcf/services/mathUtils/geometricSolids/Cube.class
+com/lemavos/mcf/services/mathUtils/pythagorasTheorem/Hypotenuse.class
+com/lemavos/mcf/services/mathUtils/Bhaskara.class
+com/lemavos/mcf/services/mathUtils/pythagorasTheorem/Leg.class
+com/lemavos/mcf/services/mathUtils/shapes/Circle.class
+com/lemavos/mcf/services/mathUtils/geometricSolids/TrapezoidalPrism.class
+com/lemavos/mcf/services/mathUtils/Factorial.class
+com/lemavos/mcf/services/mathUtils/geometricSolids/Parallelepiped.class
+com/lemavos/mcf/controller/MathController.class
+com/lemavos/mcf/services/mathUtils/shapes/Diamond.class
+com/lemavos/mcf/controller/MainController.class
+com/lemavos/mcf/services/mathUtils/shapes/Square.class
+com/lemavos/mcf/services/mathUtils/geometricSolids/Sphere.class
+com/lemavos/mcf/services/mathUtils/shapes/Rectangle.class
