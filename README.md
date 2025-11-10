@@ -49,9 +49,14 @@ A simple Java REST API that provides various math and physics formulas and solve
 │   │   │               ├── Rectangle.java
 │   │   │               └── Square.java
 │   │   └── resources
-│   │       ├── application.properties
-│   │       └── templates
-│   │           └── index.html
+│   │   |   ├── application.properties
+│   │   |   ├── static
+│   │   |   |   ├── css
+│   │   |   |   |   └── styles.css
+│   │   |   |   ├── js
+│   │   |   |   |   └── script.js
+│   │   |   └── templates
+│   │   |       └── index.html
 │   └── test
 │       └── java/com/lemavos/mcf/McfApplicationTests.java
 └── target
