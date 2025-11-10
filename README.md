@@ -29,8 +29,9 @@ A simple Java REST API that provides various math and physics formulas and solve
 │   │   │   └── com/lemavos/mcf
 │   │   │       ├── McfApplication.java
 │   │   │       ├── controller
-│   │   │       │   ├── MainController.java
 │   │   │       │   └── MathController.java
+│   │   │       ├── web
+│   │   │       │   ├── WebController.java
 │   │   │       └── services/mathUtils
 │   │   │           ├── Bhaskara.java
 │   │   │           ├── Factorial.java
