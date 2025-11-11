@@ -1,4 +1,4 @@
-package com.lemavos.mcf.controller;
+package com.lemavos.mcf.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
