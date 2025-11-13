@@ -10,6 +10,14 @@ public class valueValidator {
         }
     } 
 
+    public static void isNum(double... values){
+        for (Double v : values){
+            if (v instanceof Double){
+                throw new IllegalArgumentException("Value have to be a number!");
+            }
+        }
+    } 
+
     public static void isNull(Object... values){
         for (Object v : values){
             if (v == null){
