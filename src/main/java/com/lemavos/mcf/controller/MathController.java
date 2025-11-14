@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.lemavos.mcf.util.valueValidator;
+import com.lemavos.mcf.util.ValueValidator;
 
 import com.lemavos.mcf.services.mathUtils.Bhaskara;
 import com.lemavos.mcf.services.mathUtils.Factorial;
@@ -30,6 +30,8 @@ public class MathController {
     public ResponseEntity<?> Bhaskara(@RequestParam double a,
                                              @RequestParam double b,
                                              @RequestParam double c) {
+        
+        ValueValidator.isNull(a, b, c);
         return ResponseEntity.ok(Bhaskara.calculateBhaskara(a, b, c));
     }
 

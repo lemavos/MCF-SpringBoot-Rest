@@ -1,6 +1,6 @@
 package com.lemavos.mcf.util;
 
-public class valueValidator {
+public class ValueValidator {
 
     public static void isPositive(double... values){
         for (Double v : values){
@@ -8,8 +8,17 @@ public class valueValidator {
                 throw new IllegalArgumentException("Value Cannot be negative!");
             }
         }
-    } 
+    }
 
+    public static void aEqualZero(double... values){
+        for (Double v : values){
+            if (v == 0){
+                throw new IllegalArgumentException("(A) Can't be equal zero!");
+            }
+        }
+    }
+
+    // ahh trash code 
     public static void isNum(double... values){
         for (Double v : values){
             if (v instanceof Double){
