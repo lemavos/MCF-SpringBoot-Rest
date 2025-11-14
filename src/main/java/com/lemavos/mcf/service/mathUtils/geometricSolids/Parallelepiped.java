@@ -1,4 +1,4 @@
-package com.lemavos.mcf.services.mathUtils.geometricSolids;
+package com.lemavos.mcf.service.mathUtils.geometricSolids;
 
 public class Parallelepiped {
     public static double calculateVolumeParallelepiped(double length, double width, double height) {

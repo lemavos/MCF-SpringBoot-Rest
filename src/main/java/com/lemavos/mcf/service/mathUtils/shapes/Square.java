@@ -1,4 +1,4 @@
-package com.lemavos.mcf.services.mathUtils.shapes;
+package com.lemavos.mcf.service.mathUtils.shapes;
 
 public class Square {
     public static String calculateSquareArea(double side){

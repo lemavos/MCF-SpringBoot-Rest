@@ -1,4 +1,4 @@
-package com.lemavos.mcf.services.mathUtils.pythagorasTheorem;
+package com.lemavos.mcf.service.mathUtils.pythagorasTheorem;
 
 public class Hypotenuse {
     public static String calculateHypotenuse(double leg1, double leg2){

@@ -1,4 +1,4 @@
-package com.lemavos.mcf.services.mathUtils.pythagorasTheorem;
+package com.lemavos.mcf.service.mathUtils.pythagorasTheorem;
 
 public class Leg {
     public static String calculateLeg(double hypotenuse, double leg1){

@@ -1,4 +1,4 @@
-package com.lemavos.mcf.services.mathUtils.shapes;
+package com.lemavos.mcf.service.mathUtils.shapes;
 
 public class Rectangle {
     public static String calculateRectangleArea(double length, double width){

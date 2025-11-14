@@ -1,4 +1,4 @@
-package com.lemavos.mcf.services.mathUtils;
+package com.lemavos.mcf.service.mathUtils;
 
 import org.springframework.stereotype.Service;
 

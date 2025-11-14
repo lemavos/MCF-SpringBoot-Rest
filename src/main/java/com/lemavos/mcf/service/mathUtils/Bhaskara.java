@@ -1,4 +1,4 @@
-package com.lemavos.mcf.services.mathUtils;
+package com.lemavos.mcf.service.mathUtils;
 
 public class Bhaskara {
     public static String calculateBhaskara(double a, double b, double c) {
