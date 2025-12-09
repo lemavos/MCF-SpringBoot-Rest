@@ -9,6 +9,6 @@ public class WebController {
 
     @GetMapping("/")
     public String index(Model model) {
-        return "index";
+        return "redirect:/swagger-ui/index.html";
     }
 }
